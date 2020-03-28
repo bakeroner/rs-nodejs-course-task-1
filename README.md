@@ -58,3 +58,34 @@ npm run lint
 Press <kbd>F5</kbd> to debug.
 
 For more information, visit: https://code.visualstudio.com/docs/editor/debugging
+
+### Task 1 CLI Tool
+
+CLI tool accept 4 options (short alias and full name):
+
+-s, --shift <shiftNumber>: a shift
+-i, --input [inputPath]: an input file
+-o, --output [outputPath]: an output file
+-a, --action <actionType>: an action encode/decode
+
+Shift and action are required.
+
+To use tool you should:
+
+1. Clone project
+2. Open project root directory in terminal
+3. Write npm i to install dependecies
+4. chage directory to src/caesar-cipher/
+5. write node main.js and add all the neccessary options like:
+
+```bash
+$ node my_caesar_cli -a encode -s 7 -i "./input.txt" -o "./output.txt"
+```
+
+```bash
+$ node my_caesar_cli --action encode --shift 7 --input plain.txt --output encoded.txt
+```
+
+```bash
+$ node my_caesar_cli --action decode --shift 7 --input decoded.txt --output plain.txt
+```
